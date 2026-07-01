@@ -219,4 +219,79 @@ public class ProductDAO {
 
         return f;
     }
+    
+    public int getProductCount() {
+
+        int count = 0;
+
+        try {
+
+            String sql = "select count(*) from products";
+
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()) {
+
+                count = rs.getInt(1);
+            }
+
+        } catch(Exception e) {
+
+            e.printStackTrace();
+        }
+
+        return count;
+    }
+
+    public int getActiveProductCount() {
+
+        int count = 0;
+
+        try {
+
+            String sql = "select count(*) from products where status='Active'";
+
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()) {
+
+                count = rs.getInt(1);
+            }
+
+        } catch(Exception e) {
+
+            e.printStackTrace();
+        }
+
+        return count;
+    }
+
+    public int getCategoryCount() {
+
+        int count = 0;
+
+        try {
+
+            String sql = "select count(distinct category) from products";
+
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()) {
+
+                count = rs.getInt(1);
+            }
+
+        } catch(Exception e) {
+
+            e.printStackTrace();
+        }
+
+        return count;
+    }
 }

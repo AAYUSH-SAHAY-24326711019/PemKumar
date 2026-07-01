@@ -47,7 +47,8 @@ public class LoginServlet extends HttpServlet {
                 // ADMIN CHECK
 
                 if(email.equals(
-                "pk2335301@gmail.com")) {
+                "admin@gmail.com")) {
+//                "pk2335301@gmail.com")) {
 
                     session.setAttribute(
                     "admin", "true");

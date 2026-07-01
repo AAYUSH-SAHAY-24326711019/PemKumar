@@ -86,4 +86,28 @@ public class UserDAO {
 
         return u;
     }
+    public int getUserCount() {
+
+        int count = 0;
+
+        try {
+
+            String sql = "select count(*) from users";
+
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()) {
+
+                count = rs.getInt(1);
+            }
+
+        } catch(Exception e) {
+
+            e.printStackTrace();
+        }
+
+        return count;
+    }
 }

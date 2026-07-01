@@ -146,7 +146,7 @@ pageEncoding="UTF-8"%>
                 <li class="nav-item">
 
                     <a class="nav-link"
-                       href="<%=request.getContextPath()%>/admin/add_product.jsp">
+                       href="<%=request.getContextPath()%>/admin/dashboard.jsp">
 
                         Admin
 
