@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/main/webapp/admin/all_products.jsp=UTF-8
+encoding//src/main/webapp/admin/dashboard.jsp=UTF-8
+encoding//src/main/webapp/admin/sales_report.jsp=UTF-8
 encoding//src/main/webapp/index.jsp=UTF-8
 encoding//src/main/webapp/order_success.jsp=UTF-8
 encoding//src/main/webapp/product.jsp=UTF-8

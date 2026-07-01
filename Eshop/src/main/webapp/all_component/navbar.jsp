@@ -145,8 +145,9 @@ pageEncoding="UTF-8"%>
 
                 <li class="nav-item">
 
-                    <a class="nav-link"
-                       href="<%=request.getContextPath()%>/admin/dashboard.jsp">
+                     <a class="nav-link"
+                       href="<%=request.getContextPath()%>/admin/index.jsp"> 
+                    
 
                         Admin
 

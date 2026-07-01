@@ -2,7 +2,7 @@
 
 <%@ include file="all_component/navbar.jsp" %>
 
-<!DOCTYPE html>
+<%-- <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="css/style.css">
@@ -56,4 +56,73 @@
 </div>
 
 </body>
-</html>
+</html> --%>
+
+<form action="placeOrder" method="post">
+
+<div class="mb-3">
+
+<label>Full Name</label>
+
+<input type="text"
+class="form-control"
+value="<%=userobj!=null?userobj.getName():""%>"
+readonly>
+
+</div>
+
+<div class="mb-3">
+
+<label>Address</label>
+
+<textarea
+name="address"
+class="form-control"
+required></textarea>
+
+</div>
+
+<div class="mb-3">
+
+<label>Phone Number</label>
+
+<input type="text"
+class="form-control"
+value="<%=userobj!=null?userobj.getPhno():""%>"
+readonly>
+
+</div>
+
+<div class="mb-3">
+
+<label>Payment Method</label>
+
+<select
+name="paymentMethod"
+class="form-control">
+
+<option value="Cash On Delivery">
+Cash On Delivery
+</option>
+
+<option value="UPI">
+UPI
+</option>
+
+<option value="Card Payment">
+Card Payment
+</option>
+
+</select>
+
+</div>
+
+<button
+type="submit"
+class="btn btn-success">
+
+Place Order
+
+</button>
+
+</form>

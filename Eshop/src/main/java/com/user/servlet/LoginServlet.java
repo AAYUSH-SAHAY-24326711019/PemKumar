@@ -55,7 +55,7 @@ public class LoginServlet extends HttpServlet {
                 }
 
                 response.sendRedirect(
-                "index.jsp");
+                "admin/dashboard.jsp");
 
             } else {
 
