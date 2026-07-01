@@ -153,7 +153,7 @@ public class InvoicePDFServlet extends HttpServlet {
             Paragraph total =
             new Paragraph(
 
-            "Total Amount : ₹ "
+            "Total Amount :  "
             + order.getTotalAmount(),
 
             new Font(

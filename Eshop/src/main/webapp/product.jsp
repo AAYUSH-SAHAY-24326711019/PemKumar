@@ -49,7 +49,7 @@
                     <h5 class="card-title"><%=p.getProductName()%></h5>
 
                     <p class="text-success fw-bold">
-                        ₹<%=p.getPrice()%>
+                        <%=p.getPrice()%>
                     </p>
 
                     <a href="cart?pid=<%=p.getId()%>&pname=<%=p.getProductName()%>&price=<%=p.getPrice()%>" 

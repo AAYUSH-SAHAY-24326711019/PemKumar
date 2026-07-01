@@ -52,7 +52,7 @@ dao.getProductById(id);
             <hr>
 
             <h3 class="text-success">
-                ₹<%=p.getPrice()%>
+                <%=p.getPrice()%>
             </h3>
 
             <br>

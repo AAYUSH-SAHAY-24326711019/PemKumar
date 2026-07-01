@@ -97,7 +97,7 @@ pageEncoding="UTF-8"%>
 
                     <p class="text-success fw-bold">
 
-                        ₹<%=p.getPrice()%>
+                        <%=p.getPrice()%>
 
                     </p>
 

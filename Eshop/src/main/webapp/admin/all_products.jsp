@@ -53,7 +53,7 @@
 
             <td><%=p.getProductName()%></td>
 
-            <td>₹<%=p.getPrice()%></td>
+            <td><%=p.getPrice()%></td>
 
             <td>
 

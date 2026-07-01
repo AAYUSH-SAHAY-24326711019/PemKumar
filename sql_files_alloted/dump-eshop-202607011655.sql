@@ -40,6 +40,67 @@ LOCK TABLES `categories` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `order_items`
+--
+
+DROP TABLE IF EXISTS `order_items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `order_items` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `order_id` int DEFAULT NULL,
+  `product_id` int DEFAULT NULL,
+  `product_name` varchar(255) DEFAULT NULL,
+  `quantity` int DEFAULT NULL,
+  `unit_price` decimal(10,2) DEFAULT NULL,
+  `subtotal` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `order_items`
+--
+
+LOCK TABLES `order_items` WRITE;
+/*!40000 ALTER TABLE `order_items` DISABLE KEYS */;
+INSERT INTO `order_items` VALUES (1,1,20,'Philips 138 cm',1,45999.00,45999.00),(2,2,1,'Apple iPhone 17e',1,64900.00,64900.00);
+/*!40000 ALTER TABLE `order_items` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `invoice_no` varchar(50) DEFAULT NULL,
+  `user_id` int DEFAULT NULL,
+  `customer_name` varchar(100) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `address` text,
+  `payment_method` varchar(50) DEFAULT NULL,
+  `total_amount` decimal(10,2) DEFAULT NULL,
+  `order_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,'INV-A1BCA6EC',11,'customer1','1200000012','patna','Cash On Delivery',45999.00,'2026-07-01 10:17:56','PLACED'),(2,'INV-A5580C43',11,'customer1','1200000012','Patna','Cash On Delivery',64900.00,'2026-07-01 11:12:02','PLACED');
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `products`
 --
 
@@ -106,7 +167,7 @@ CREATE TABLE `users` (
   `phno` varchar(20) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,7 +176,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Prem Kumar','pk2335301@gmail.com','09471829586','1223'),(2,'VIJAY KUMAR ','Vijay@gmail.com','212121212121','12345678'),(3,'Ram','Ram@gamil.com','234233333','12345'),(4,'22222','pk2335301@gmail.com','222222','1223'),(5,'Aayush','pk2335301@gmail.com','22131231321','1223'),(6,'Pankaj','pankaj@gmail.com','12324344','1223'),(7,'Rahul kumar ','Rahulkr12@gmail.com','2398765678','44444'),(8,'Harsh','Harsh@gmail.com','222233333','4321'),(9,'Pankaj Kumar','Pankaj2@gmail.com','9875747474','123'),(10,'Aman','Aman@gmail','88888888','1234');
+INSERT INTO `users` VALUES (1,'Prem Kumar','admin@gmail.com','09471829586','admin'),(2,'VIJAY KUMAR ','Vijay@gmail.com','212121212121','12345678'),(3,'Ram','Ram@gamil.com','234233333','12345'),(4,'22222','pk2335301@gmail.com','222222','1223'),(5,'Aayush','pk2335301@gmail.com','22131231321','1223'),(6,'Pankaj','pankaj@gmail.com','12324344','1223'),(7,'Rahul kumar ','Rahulkr12@gmail.com','2398765678','44444'),(8,'Harsh','Harsh@gmail.com','222233333','4321'),(9,'Pankaj Kumar','Pankaj2@gmail.com','9875747474','123'),(10,'Aman','Aman@gmail','88888888','1234'),(11,'customer1','customer1@gmail.com','1200000012','pass');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,4 +193,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-01 14:38:59
+-- Dump completed on 2026-07-01 16:55:26

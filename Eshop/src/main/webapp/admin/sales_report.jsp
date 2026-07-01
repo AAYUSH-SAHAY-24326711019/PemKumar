@@ -126,7 +126,7 @@ if(rs.next()){
 
 <h3>
 
-₹ <%=rs.getDouble("revenue")%>
+ <%=rs.getDouble("revenue")%>
 
 </h3>
 

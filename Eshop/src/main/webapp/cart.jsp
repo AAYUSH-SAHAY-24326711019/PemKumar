@@ -50,7 +50,7 @@
         </td>
 
         <td>
-            ₹<%=c.getPrice()%>
+            <%=c.getPrice()%>
         </td>
 
         <td>
@@ -58,7 +58,7 @@
         </td>
 
         <td>
-            ₹<%=c.getTotal()%>
+            <%=c.getTotal()%>
         </td>
 
         <td>
@@ -89,7 +89,7 @@
 
         <td>
 
-            <b>₹<%=grandTotal%></b>
+            <b><%=grandTotal%></b>
 
         </td>
 
